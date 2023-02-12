@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
                     //Convierte desde Kelvin
                     val formattedNumber ="%.2f".format(convertirKaC(gradosK.text.toString().toDouble()))
                     gradosC.setText(formattedNumber)
+                }else{
+                    //Convierte desde Farenheit por default
+                    val formattedNumber="%.2f".format(convertirFaC(gradosF.text.toString().toDouble()))
+                    gradosC.setText(formattedNumber)
                 }
             }catch (e: java.lang.Exception){
                 println(e)
@@ -50,6 +54,10 @@ class MainActivity : AppCompatActivity() {
                     //Convierte desde Kelvin
                     val formattedNumber="%.2f".format(convertirKaF(gradosK.text.toString().toDouble()))
                     gradosF.setText(formattedNumber)
+                } else{
+                    //Convierte desde celsius por default
+                    val formattedNumber="%.2f".format(convertirCaF(gradosC.text.toString().toDouble()))
+                    gradosF.setText(formattedNumber)
                 }
             } catch (e: java.lang.Exception){
                 println(e)
@@ -66,6 +74,10 @@ class MainActivity : AppCompatActivity() {
                 } else if (gradosC.text.toString().trim().equals("")){
                     //Convierte desde Farenheit
                     val formattedNumber ="%.2f".format(convertirFaK(gradosF.text.toString().toDouble()))
+                    gradosK.setText(formattedNumber)
+                }else{
+                    //Convierte desde Celsius por default
+                    val formattedNumber ="%.2f".format(convertirCaK(gradosC.text.toString().toDouble()))
                     gradosK.setText(formattedNumber)
                 }
             } catch (e: java.lang.Exception){
